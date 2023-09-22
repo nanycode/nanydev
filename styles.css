@@ -1,0 +1,86 @@
+.form {
+    position: absolute;
+    display: flex;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.3);
+    width: 90%; /* Usa porcentajes en lugar de un ancho fijo */
+    max-width: 600px; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
+    height: 600px; /* Permitir que la altura se ajuste automáticamente según el contenido */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    justify-content: center;
+}
+.form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form textarea {
+    width: 100%; /* Usa porcentajes en lugar de un ancho fijo */
+    max-width: 100%; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+.form input[type="text"] {
+    width: 30rem; /* Puedes ajustar este valor según tus necesidades */
+    max-width: 100%; /* Garantiza que no se desborde del contenedor */
+}
+    .container {
+        max-width: 400px; /* Ancho máximo del contenedor */
+        margin: 0 auto; /* Centrar el contenedor horizontalmente */
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container h1 {
+        font-size: 24px; /* Tamaño de fuente para el título */
+    }
+
+    /* Estilos para el botón */
+    .form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    
+    
+    
+    .form .contact_message {
+        width: 100%;
+        height: 100%; 
+        margin-bottom: 20px;
+        max-height: 200px;
+        overflow-y: auto;
+        background: red;
+        position: relative;
+    }
+    
+    .form textarea {
+        width: 100%;
+        border: none;
+        padding: 5px;
+        resize: vertical; /* Cambiamos "none" a "vertical" para permitir la redimensión vertical del textarea */
+    }
+    
+    .contact_message {
+        width: 100%; 
+    max-width: 100%; 
+    }
+    .inputMessage {
+        width: 30rem; 
+        max-width: 100%; 
+    }
+    .inputSubmit{
+        margin: 20px;
+    }
+
+   

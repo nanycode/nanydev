@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Blinker&family=Heebo:wght@500&family=Mitr:wght@200;300&family=Permanent+Marker&family=Roboto+Mono:ital,wght@0,300;1,200;1,300&family=Roboto:wght@500&family=Rubik+Mono+One&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        h1 {
+            position: relative;
+            z-index: 1000;
+            color: aliceblue;
+            font-size: 50px;
+            font-family: 'Baloo 2', cursive;
+font-family: 'Blinker', sans-serif;
+font-family: 'Heebo', sans-serif;
+font-family: 'Mitr', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Rubik Mono One', sans-serif;
+font-family: 'Work Sans', sans-serif;
+        }
+
+        .card {
+            position: absolute;
+            display: flex;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.3);
+            width: 50%;
+            height: 90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            justify-content: center;
+        }
+
+        .highlight {
+            color: yellow;
+        }
+
+        .typing-animation {
+            color: antiquewhite;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        img {
+            width: 250px;
+            border-radius: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        /* Estilos para la lista y los elementos de la lista */
+        .home-social-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente los elementos de la lista */
+        }
+
+        .home-social-list ul li {
+            margin-right: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        /* Estilos para las imágenes */
+        .container-social-list {
+            width: 40px;
+            height: 40px;
+            overflow: hidden; /* Oculta el exceso de la imagen */
+            border-radius: 10%; /* Aplica un borde redondeado para crear un cuadrado */
+            transition: background-color 0.2s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid 2px black;
+        }
+
+        .image-and-social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            
+            
+        }
+        .container-social-list img {
+            width: 100%;
+            height: auto;
+            background-color:  rgba(255, 255, 255, 0.3);
+        }
+
+        .home-social-list ul li:hover {
+            transform: translateY(-5px);
+            color: yellow;
+        }
+        .container-social-list:hover {
+            
+            background: yellow
+        }
+
+    </style>
+</head>
+<body>
+    <!-- tsParticles container -->
+    <div class="card">
+        <div class="container">
+            <div>
+                <h1>Hi, I am <span class="highlight">Hilary Mora</span></h1>
+            </div>
+            <div>
+                <p><span class="typing-animation"></span></p>
+            </div>
+            
+            <div class="image-and-social">
+                <img src="https://i.imgur.com/GpdRkqS.jpg" alt="img">
+                <nav class="home-social-list">
+                    <ul>
+                        <li>
+                            <div class="container-social-list">
+                                <a href="https://github.com/hilarymora" target="_blank">
+                                    <img class="home-social-list-github" src="https://i.imgur.com/ermdnEz.png" alt="GitHub">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container-social-list">
+                                <a href="https://www.linkedin.com/in/hilary-mora-ru%C3%ADz-3972071ba/" target="_blank">
+                                    <img class="home-social-list-linkedin" src="https://i.imgur.com/1QVBlR0.png" alt="linkedin">
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                           
+                            <div class="container-social-list">
+                                <a href="contact.html" target="_self">
+                                    <img src="https://i.imgur.com/h2XT6v2.png" alt="hilarymoraruiz@gmail.com">
+                                </a>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div id="tsparticles"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="./javascript.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  
+ 
+        
+    <script>
+        var typed = new Typed(".typing-animation", {
+            strings: ["Full-Stack Developer"],
+            typeSpeed: 70,
+            backSpeed: 60,
+            loop: false,
+            onComplete: function (self) {
+                self.stop();
+            }
+        });
+
+    </script>
+</body>
+</html>
