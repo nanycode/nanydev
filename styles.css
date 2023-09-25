@@ -1,6 +1,4 @@
-
 /* RESETS */
-
 *,
 *:before,
 *:after {
@@ -9,123 +7,263 @@
 	padding: 0px;
 }
 
+h1 {
+	position: relative;
+	z-index: 1000;
+	color: aliceblue;
+	font-size: 50px;
+	font-family: "Baloo 2", cursive;
+	font-family: "Blinker", sans-serif;
+	font-family: "Heebo", sans-serif;
+	font-family: "Mitr", sans-serif;
+	font-family: "Permanent Marker", cursive;
+	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Mono", monospace;
+	font-family: "Rubik Mono One", sans-serif;
+	font-family: "Work Sans", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+.card {
+	position: absolute;
+	display: flex;
+	z-index: 1000;
+	background: rgba(255, 255, 255, 0.3);
+	width: 90%; /* Usa porcentajes en lugar de un ancho fijo */
+	max-width: 600px; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
+	height: 600px; /* Permitir que la altura se ajuste automáticamente según el contenido */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	justify-content: center;
+}
+
+.highlight {
+	color: yellow;
+}
+
+.typing-animation {
+	color: antiquewhite;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+	width: 100%;
+	width: 250px;
+	border-radius: 100%;
+	height: 250px;
+	object-fit: cover;
+	object-position: top;
+}
+
+/* Estilos para la lista y los elementos de la lista */
+.home-social-list ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center; /* Centra horizontalmente los elementos de la lista */
+}
+
+.home-social-list ul li {
+	margin: 30px;
+	transition: transform 0.2s ease;
+}
+
+/* Estilos para las imágenes */
+.container-social-list {
+	width: 40px;
+	height: 40px;
+	overflow: hidden; /* Oculta el exceso de la imagen */
+	border-radius: 10%; /* Aplica un borde redondeado para crear un cuadrado */
+	transition: background-color 0.2s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid 2px black;
+}
+
+.social__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.container-social-list img {
+	width: 100%;
+	height: auto;
+
+	background-color: transparent;
+}
+
+.home-social-list ul li:hover {
+	transform: translateY(-5px);
+}
+.container-social-list:hover {
+	background-color: black;
+}
+
+/* Estilo original de los logos */
+/* Estilo original de los logos */
+/* Estilo por defecto de los logos con fondo negro */
+.home-social-list-logo {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	object-position: center;
+	background-color: transparent; /* Fondo negro por defecto */
+	border-radius: 50%; /* Hacer el fondo redondo */
+	padding: 7px;
+}
+
+/* Estilo al hacer hover en el contenedor para cambiar la imagen a amarillo */
+.container-social-list:hover .home-social-list-logo {
+	-webkit-filter: invert(
+		0
+	); /* Invertir los colores de la imagen al hacer hover */
+	filter: invert(0); /* Invertir los colores de la imagen al hacer hover */
+}
+
+/* Estilo al hacer hover en el contenedor para cambiar el fondo a negro */
+.container-social-list:hover {
+	background-color: black; /* Cambiar el fondo a negro al hacer hover */
+	transition: background-color 0.2s ease; /* Agregar una transición suave para el fondo */
+}
+
+.home-social-list {
+	margin: 0;
+	position: absolute;
+	bottom: 5%;
+}
+.container {
+	max-width: 400px; /* Ancho máximo del contenedor */
+	margin: 0 auto; /* Centrar el contenedor horizontalmente */
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.card__container {
+	width: 100%;
+}
+
 .form {
-  position: absolute;
-  display: flex;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.3);
-  width: 90%; /* Usa porcentajes en lugar de un ancho fijo */
-  max-width: 600px; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
-  height: 600px; /* Permitir que la altura se ajuste automáticamente según el contenido */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  justify-content: center;
+	position: absolute;
+	display: flex;
+	z-index: 1000;
+	background: rgba(255, 255, 255, 0.3);
+	width: 90%; /* Usa porcentajes en lugar de un ancho fijo */
+	max-width: 600px; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
+	height: 600px; /* Permitir que la altura se ajuste automáticamente según el contenido */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	justify-content: center;
 }
 .form label {
-  display: block;
-  text-align: left;
-  margin-bottom: 5px;
+	display: block;
+	text-align: left;
+	margin-bottom: 5px;
 }
 
 .form .container__form,
 .form textarea {
-  width: 100%; /* Usa porcentajes en lugar de un ancho fijo */
-  max-width: 100%; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
-  padding: 10px;
-  box-sizing: border-box;
+	width: 100%; /* Usa porcentajes en lugar de un ancho fijo */
+	max-width: 100%; /* Establece un ancho máximo para evitar que se vuelva demasiado ancho */
+	padding: 10px;
+	box-sizing: border-box;
 }
 .form .container__form {
-  padding: 10px 0;
-  width: 100%; /* Puedes ajustar este valor según tus necesidades */
-  max-width: 100%; /* Garantiza que no se desborde del contenedor */
+	padding: 10px 0;
+	width: 100%; /* Puedes ajustar este valor según tus necesidades */
+	max-width: 100%; /* Garantiza que no se desborde del contenedor */
 }
 input[type="text"] {
-  margin: 0%;
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid;
-  padding: 10px;
-  outline: none;
-  transition: border-bottom 0.3s ease-in-out;
+	margin: 0%;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid;
+	padding: 10px;
+	outline: none;
+	transition: border-bottom 0.3s ease-in-out;
 }
 
 .container__form:focus::before {
-  content: ""; /* Agrega un contenido vacío para el pseudo-elemento */
-  position: absolute;
-  bottom: -2px; /* Ajusta la posición de la línea según tus necesidades */
-  left: 0;
-  right: 0;
-  border-bottom: 8px solid yellow; /* Establece el estilo de la línea */
+	content: ""; /* Agrega un contenido vacío para el pseudo-elemento */
+	position: absolute;
+	bottom: -2px; /* Ajusta la posición de la línea según tus necesidades */
+	left: 0;
+	right: 0;
+	border-bottom: 8px solid yellow; /* Establece el estilo de la línea */
 }
 .container {
-  
-  max-width: 400px; /* Ancho máximo del contenedor */
-  margin: 0 auto; /* Centrar el contenedor horizontalmente */
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+	max-width: 400px; /* Ancho máximo del contenedor */
+	margin: 0 auto; /* Centrar el contenedor horizontalmente */
+	justify-content: center;
+	text-align: center;
+	align-items: center;
 }
 
 .container h1 {
-  font-size: 24px; /* Tamaño de fuente para el título */
+	font-size: 24px; /* Tamaño de fuente para el título */
 }
 
 /* Estilos para el botón */
 .form input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: yellow;
-  color: #1e1e1e;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	width: 100%;
+	padding: 10px;
+	background-color: yellow;
+	color: #1e1e1e;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact_message {
-  color: #ccc;
-  margin-bottom: 20px; /* Agrega margen inferior para separar elementos */
-  padding: 10px 0; /* Agrega relleno para un aspecto más limpio */
+	color: #ccc;
+	margin-bottom: 20px; /* Agrega margen inferior para separar elementos */
+	padding: 10px 0; /* Agrega relleno para un aspecto más limpio */
 }
 
 textarea {
-  width: 100%;
-  height: 200px; /* Ajusta la altura según tus necesidades */
-  border-radius: 4px;
-  resize: none;
+	width: 100%;
+	height: 200px; /* Ajusta la altura según tus necesidades */
+	border-radius: 4px;
+	resize: none;
 }
 
 .container {
-  width: 100%;
+	width: 100%;
 }
 
 .inputSubmit {
-  margin: 0px;
+	margin: 0px;
 }
 
 h1 {
-  color: antiquewhite;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: antiquewhite;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container__form {
-  position: relative;
-  padding: 10px 0;
-  
-
+	position: relative;
+	padding: 10px 0;
 }
 
 .email {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
 }
 .text {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }

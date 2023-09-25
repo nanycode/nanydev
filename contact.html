@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <title>Contact Form</title>
-  </head>
-  <body>
-    <div class="form">
-      <div class="container">
-        <h1><b></b>Contact Me</h1>
-        <form
-          action="mailto:hilarymoraruiz@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
-          <div class="container__form">
-            <input
-            class="text"
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              required
-            />
-          </div>
-
-          <div class="container__form">
-            <input
-              class="email"
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Email"
-              required
-            />
-          </div>
-
-          <div class="contact_message">
-            <label for="inputMessage"></label>
-            <div class="textarea-container">
-              <textarea
-                id="inputMessage"
-                name="message"
-                placeholder="Message"
-                required
-              ></textarea>
-            </div>
-          </div>
-          <div class="inputSubmit">
-            <input type="submit" value="Send" />
-          </div>
-        </form>
-      </div>
-    </div>
-    <div id="tsparticles"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"></script>
-    <script src="./javascript.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed(".typing-animation", {
-        strings: ["Full-Stack Developer"],
-        typeSpeed: 70,
-        backSpeed: 60,
-        loop: false,
-        onComplete: function (self) {
-          self.stop();
-        },
-      });
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Custom Styles -->
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<title>Contact Form</title>
+	</head>
+	<body>
+		<div class="form">
+			<div class="container">
+				<h1>Contact Me</h1>
+				<form id="contact-form" action="">
+					<div class="container__form">
+						<input
+							class="text"
+							type="text"
+							id="from_name"
+							name="from_name"
+							placeholder="Name"
+							required
+						/>
+					</div>
+					<div class="container__form">
+						<input
+							class="text"
+							type="text"
+							id="subject"
+							name="subject"
+							placeholder="Subject"
+							required
+						/>
+					</div>
+					<div class="container__form">
+						<input
+							class="email"
+							type="text"
+							id="from_email"
+							name="from_email"
+							placeholder="Email"
+							required
+						/>
+					</div>
+					<div class="contact_message">
+						<div class="textarea-container">
+							<textarea
+								id="message"
+								name="message"
+								placeholder="Message"
+								required
+							></textarea>
+						</div>
+					</div>
+					<div class="inputSubmit">
+						<input type="submit" value="Send" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="tsparticles"></div>
+		<!-- tsParticles -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.12.0/tsparticles.bundle.min.js"
+		></script>
+		<!-- EmailJS -->
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<!-- Custom Scripts -->
+		<script type="text/javascript" src="./main.js"></script>
+	</body>
 </html>
