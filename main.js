@@ -170,11 +170,19 @@ if (typeof emailjs !== "undefined") {
 				.then(
 					function (response) {
 						console.log("SUCCESS!", response.status, response.text);
+						// Recarga la página después de 1 segundo
+						setTimeout(function () {
+							location.reload();
+						}, 1000);
 					},
 					function (error) {
 						console.log("FAILED...", error);
 					}
+					
+					
 				);
+				
 		});
+		
 	};
 }

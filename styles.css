@@ -58,6 +58,7 @@ img {
 	height: 250px;
 	object-fit: cover;
 	object-position: top;
+	margin-top: 20px;
 }
 
 /* Estilos para la lista y los elementos de la lista */
@@ -95,6 +96,7 @@ img {
 .container-social-list img {
 	width: 100%;
 	height: auto;
+	margin: 0;
 
 	background-color: transparent;
 }
